@@ -1,5 +1,5 @@
 {% set name = "harfile" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/harfile-{{ version }}.tar.gz
-  sha256: 23be8037e1296bb4787a15543a37835ed91f408c8296988f9ba022a44accad9e
+  sha256: 8998fa4410ad17d7b5671bab36ea058adde835bbb27f6a3da4b423019da584da
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
