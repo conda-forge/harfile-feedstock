@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: harfile
-  version: "0.4.0"
+  version: "0.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/harfile-${{ version }}.tar.gz
-  sha256: 34e2d9ef34101d769566bffab3c420e147776174308bed1a036ed8db600cabde
+  sha256: c1524b8f0a39dd9f19365760aefb3adbba951818310d17b2eaa293de1f4c170a
 
 build:
   number: 0
@@ -30,7 +30,9 @@ tests:
       imports:
         - harfile
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Writer for HTTP Archive (HAR) files
