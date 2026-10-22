@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: harfile
-  version: "0.5.0"
+  version: "0.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/harfile-${{ version }}.tar.gz
-  sha256: c1524b8f0a39dd9f19365760aefb3adbba951818310d17b2eaa293de1f4c170a
+  sha256: 3e5751d52c59bda35789748256cbac097b664e65315d15ded67b006c173e34b3
 
 build:
   number: 0
